@@ -11,8 +11,8 @@ namespace App\Classes;
 
 class FbApiHelper
 {
-    public static $client_id = '233480197204268'; // app id
-    public static $secret_id = '526211dca363fe199aff2b6a4d74dc24'; // secret key application
+    public static $client_id = '401257223717045'; // app id
+    public static $secret_id = '437bba81e515074d5576d25b74d7b208'; // secret key application
 
 
     public static function getLinkAuthCode($redirect_uri){

@@ -30,7 +30,7 @@
     <div class="signUp__content signUp__content_pad">
         <div class="signUp__box minWidth signUp__justi ">
             <div class="signUp__socBlock signUp__socBlock_din">
-                <a href="index.html" class="social social_vk ">
+                <a href="{{ App\Classes\VkApiHelper::getLinkAuthCode( route('login.vk') ) }}" class="social social_vk ">
                     <span class="fa icon-fa-vk"></span>
                 </a>
                 <!-- /.social -->
@@ -41,7 +41,7 @@
             <!-- /.signUp__line -->
             <!-- /.signUp__socBlock -->
             <div class="signUp__socBlock signUp__socBlock_din">
-                <a href="index.html" class="social  social_fc">
+                <a href="{{ App\Classes\FbApiHelper::getLinkAuthCode( route('login.fb') ) }}" class="social  social_fc">
                     <span class="fa icon-fa-fc"></span>
                 </a>
                 <!-- /.social -->

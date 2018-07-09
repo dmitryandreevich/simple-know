@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="wrapper" class="wrapper">
-
+        @include('layouts.messages')
         <section class="signUp">
             <div class="signUp__popup">
                 @yield('content')

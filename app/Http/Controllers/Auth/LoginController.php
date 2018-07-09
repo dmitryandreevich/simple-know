@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Classes\FbApiHelper;
+use App\Classes\VkApiHelper;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -68,6 +70,44 @@ class LoginController extends Controller
         }
 
         return redirect()->back()->with('error', 'Логин или пароль неверны.')->withInput();
+    }
+
+    public function loginByVk(Request $request){
+
+        $vkApiHelper = new VkApiHelper();
+        try{
+            $at = $vkApiHelper->getAccessData( $request->input('code'),route('login.vk') );
+            $user = User::where('vk_id', $at['user_id'])->first();
+
+            if($user !== null){
+                Auth::login($user);
+
+                return redirect($this->redirectTo);
+            }
+
+            return redirect()->back()->with('error', 'Данный аккаунт не зарегистрирован!');
+        }catch (\Exception $exception){
+            return redirect()->back()->with('error', $exception->getMessage() );
+        }
+    }
+
+    public function loginByFb(Request $request){
+        $fbApiHelper = new FbApiHelper();
+        try{
+            $at = $fbApiHelper->getAccessData( $request->input('code'),route('login.fb') );
+            $data = $fbApiHelper->getInfoUser($at['access_token']);
+            $user = User::where('fb_id', $data['id'])->first();
+
+            if($user !== null){
+                Auth::login($user);
+
+                return redirect($this->redirectTo);
+            }
+
+            return redirect()->back()->with('error', 'Данный аккаунт не зарегистрирован!');
+        }catch (\Exception $exception){
+            return redirect()->back()->with('error', $exception->getMessage());
+        }
     }
 
     public function logout(){

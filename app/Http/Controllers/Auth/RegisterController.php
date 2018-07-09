@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Classes\FbApiHelper;
+use App\Classes\VkApiHelper;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -110,4 +115,77 @@ class RegisterController extends Controller
         // auto login
         return redirect()->back()->with('success', 'Пользователь был успешно создан!');
     }
+
+    /**
+     * Registration by user in VK
+     *
+     * @param Request $request
+     */
+    public function registerByVk(Request $request)
+    {
+        try{
+            $vkApiHelper = new VkApiHelper();
+            $at = $vkApiHelper->getAccessData($request->input('code'), route('register.vk'));
+        }catch (\Exception $exception){
+            return redirect('/')->with('error', 'Произошла ошибка при получении данных VK API!');
+        }
+        // get data by vk
+        $data = $vkApiHelper->getInfoUser($at['access_token'])['response'][0];
+        try {
+            $user = User::create([
+                'email' => isset($at['email']) ? $at['email'] : "",
+                'vk_id' => $at['user_id'],
+                'name' => $data->first_name,
+                'second_name' => $data->last_name
+            ]);
+
+            Auth::login($user);
+
+            try{
+                $fileContent = file_get_contents($data->photo_200_orig);
+
+                Storage::put("public/avatars/$user->id.jpg", $fileContent);
+
+                $user->avatar = "avatars/$user->id.jpg";
+                $user->save();
+
+                return redirect('/')->with('success', ' Вы успешно зарегистрировались!');
+            }catch (\Exception $e){
+
+            }
+
+        } catch (QueryException $exception) {
+            return redirect('/')->with('error', 'Произошла ошибка. Данный Email или VK уже привязаны!');
+        }
+    }
+
+    public function registerByFb(Request $request){
+        try{
+            $fbApiHelper = new FbApiHelper();
+            $at = $fbApiHelper->getAccessData( $request->input('code'), route('register.fb') );
+
+            $data = $fbApiHelper->getInfoUser($at['access_token']);
+
+        }catch (\Exception $exception){
+            return redirect('/')->with('error', 'Произошла ошибка при получении данных Facebook API!');
+        }
+
+        try{
+            $name = explode(' ', $data['name']);
+            $user = User::create([
+                'email' => isset($data['email']) ? $data['email'] : '',
+                'fb_id' => $data['id'],
+                'name' => $name[0],
+                'second_name' => $name[1]
+            ]);
+
+            Auth::login($user);
+
+            return redirect('/')->with('success', ' Вы успешно зарегистрировались.');
+        }catch (QueryException $exception){
+            return redirect('/')->with('error', 'Произошла ошибка. Данный Email или Facebook уже привязаны!');
+        }
+
+    }
+
 }

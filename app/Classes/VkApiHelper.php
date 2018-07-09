@@ -13,7 +13,8 @@ use http\Env\Request;
 
 class VkApiHelper
 {
-    public static $client_id = '6487662';
+    public static $client_id = '6628152';
+    public static $client_secret = 'b4dcbdkp2dypB8b3TOfr';
 
     /**
      * Generate link authorization code
@@ -24,7 +25,7 @@ class VkApiHelper
     public static function getLinkAuthCode($redirect_uri){
         $params = [
             'client_id' => self::$client_id,
-            'display' => 'popup',
+            'display' => 'page',
             'redirect_uri' => $redirect_uri,
             'scope' => 'email',
             'response_type' => 'code',
@@ -47,7 +48,7 @@ class VkApiHelper
 
         $params = [
             'client_id' => self::$client_id,
-            'client_secret' => 'SneyrLQ7kZGMcFLdilWH',
+            'client_secret' => self::$client_secret,
             'redirect_uri' => $redirect_uri,
             'code' => $code
         ];

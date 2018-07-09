@@ -32,7 +32,7 @@
     <div class="signUp__content">
         <div class="signUp__box">
             <div class="signUp__socBlock">
-                <a href="index.html" class="social social_vk ">
+                <a href="{{ App\Classes\VkApiHelper::getLinkAuthCode( route('register.vk') ) }}" class="social social_vk ">
                     <span class="fa icon-fa-vk"></span>
                     <span class="text">
                                     Зарегистрироваться через ВК
@@ -42,7 +42,7 @@
             </div>
             <!-- /.signUp__socBlock -->
             <div class="signUp__socBlock">
-                <a href="index.html" class="social  social_fc">
+                <a href="{{ App\Classes\FbApiHelper::getLinkAuthCode( route('register.fb') ) }}" class="social  social_fc">
                     <span class="fa icon-fa-fc"></span>
                     <span class="text">
                                             Зарегистрироваться через FB
