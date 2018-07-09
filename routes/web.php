@@ -14,9 +14,16 @@
 Route::get('/signup', function () {
     return view('auth.signUp');
 });
-Route::get('/signin', function () {
-    return view('auth.signIn');
+
+Auth::routes();
+
+Route::group(['namespace' => 'Auth'], function (){
+
+    Route::get('/signupemail','RegisterController@index')->name('register.index');
+    Route::post('/signupemail','RegisterController@registerByEmail')->name('register.email');
+
+    Route::get('/signin','LoginController@index')->name('login.index');
+    Route::post('/signin','LoginController@loginByEmail')->name('login.email');
+
 });
-Route::get('/signupemail', function () {
-    return view('auth.signUpEmail');
-});
+Route::get('/home', 'HomeController@index')->name('home');

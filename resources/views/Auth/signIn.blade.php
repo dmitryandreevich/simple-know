@@ -6,7 +6,7 @@
  * Time: 11:37
  */
 ?>
-@section('title', 'Регистрация')
+@section('title', 'Вход')
 
 @extends('layouts.signUp')
 
@@ -51,36 +51,39 @@
         <!-- /.signUp__box -->
         <div class="signUp__box minWidth signUp__justi">
 
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <div class="inputArea">
-                    <input type="text" class="inputArea__input">
-                    <label for="" class="inputArea__name">
-                        Email
-                    </label>
+            <form action="{{ route('login.email') }}" method="post">
+                {{ csrf_field() }}
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <div class="inputArea">
+                        <input type="email" class="inputArea__input" name="email">
+                        <label for="" class="inputArea__name">
+                            Email
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <div class="inputArea">
-                    <input type="text" class="inputArea__input">
-                    <label for="" class="inputArea__name">
-                        Пароль
-                    </label>
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <div class="inputArea">
+                        <input type="text" class="inputArea__input" name="password">
+                        <label for="" class="inputArea__name">
+                            Пароль
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <img src="images/kapcha.png" alt="">
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <button class="btn signUp__btn">
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <img src="images/kapcha.png" alt="">
+                </div>
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <button class="btn signUp__btn" type="submit">
 									<span class="btn__name">
 										Войти
 									</span>
-                </button>
-            </div>
-            <!-- /.signUp__inpBlock -->
+                    </button>
+                </div>
+                <!-- /.signUp__inpBlock -->
+            </form>
         </div>
         <!-- /.signUp__box -->
     </div>

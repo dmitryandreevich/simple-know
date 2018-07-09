@@ -51,48 +51,52 @@
             <!-- /.signUp__socBlock -->
         </div>
         <!-- /.signUp__box -->
-        <div class="signUp__box minWidth signUp__justi">
-            <div class="signUp__inpBlock">
-                <div class="inputArea">
-                    <input type="text" class="inputArea__input">
-                    <label for="" class="inputArea__name">
-                        Имя
-                    </label>
+        <form action="{{ route('register.email') }}" method="post">
+            {{ csrf_field() }}
+            <div class="signUp__box minWidth signUp__justi">
+                <div class="signUp__inpBlock">
+                    <div class="inputArea">
+                        <input type="text" class="inputArea__input" name="name">
+                        <label for="" class="inputArea__name">
+                            Имя
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock">
-                <div class="inputArea">
-                    <input type="text" class="inputArea__input">
-                    <label for="" class="inputArea__name">
-                        Фамилия
-                    </label>
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock">
+                    <div class="inputArea">
+                        <input type="text" class="inputArea__input" name="second_name">
+                        <label for="" class="inputArea__name">
+                            Фамилия
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <div class="inputArea">
-                    <input type="text" class="inputArea__input">
-                    <label for="" class="inputArea__name">
-                        Email
-                    </label>
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <div class="inputArea">
+                        <input type="email" class="inputArea__input" name="email">
+                        <label for="" class="inputArea__name">
+                            Email
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <img src="images/kapcha.png" alt="">
-            </div>
-            <!-- /.signUp__inpBlock -->
-            <div class="signUp__inpBlock signUp__inpBlock_wi100">
-                <button class="btn signUp__btn">
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <img src="images/kapcha.png" alt="">
+                </div>
+                <!-- /.signUp__inpBlock -->
+                <div class="signUp__inpBlock signUp__inpBlock_wi100">
+                    <button class="btn signUp__btn" type="submit">
 									<span class="btn__name">
 										Зарегистрироваться
 									</span>
-                </button>
+                    </button>
+                </div>
+                <!-- /.signUp__inpBlock -->
             </div>
-            <!-- /.signUp__inpBlock -->
-        </div>
-        <!-- /.signUp__box -->
+            <!-- /.signUp__box -->
+        </form>
+
     </div>
     <!-- /.signUp__content -->
     <div class="signUp__footer">

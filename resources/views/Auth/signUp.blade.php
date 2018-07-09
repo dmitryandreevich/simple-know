@@ -6,7 +6,7 @@
  * Time: 11:37
  */
 ?>
-@section('title', 'Вход')
+@section('title', 'Регистрация')
 
 @extends('layouts.signUp')
 
@@ -35,7 +35,7 @@
                 <a href="index.html" class="social social_vk ">
                     <span class="fa icon-fa-vk"></span>
                     <span class="text">
-                                            Зарегистрироваться через ВК
+                                    Зарегистрироваться через ВК
                                         </span>
                 </a>
                 <!-- /.social -->
