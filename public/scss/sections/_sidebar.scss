@@ -1,0 +1,199 @@
+.sidebar{
+	float: left;
+	width:  300px;
+	padding:0 7px;
+	position: relative;
+	z-index: 3;
+	top: 0px;
+	
+}
+
+
+.sidebar__container{
+	padding-top: 55px;
+}
+
+
+.sidebar__wrap{
+	background: #FFFFFF;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	position: relative;
+	padding-bottom: 19px;
+}
+
+
+
+.sidebar__character{
+	width: 100%;
+	position: relative;
+	top: -55px;
+}
+
+.sidebar__margin-55px{
+	position: relative;
+	margin-top: -55px;
+}
+.character__foto{
+	width: 119px;
+	height: 119px;
+	overflow: hidden;
+	border-radius: 100px;
+	border: 3px solid #fff;
+	margin: 0 auto;
+}
+.character__img{
+	max-width: 100%;
+}
+.character__FIO{
+	margin-top: 24px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	a{
+		color: #333;
+	}
+}
+
+
+// list
+.sidebar__list{
+	width: 200px;
+	margin-left: 55px;
+	    margin-top: 29px;
+}
+.sidebar__item{
+	margin-bottom: 20px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.sidebar__link{
+	padding-left: 27px;
+	position: relative;
+	display: inline-block;
+	color: #333;
+	font-size: 16px;
+	transition:0.2s;
+	font-style: normal;
+	&:hover{
+		color: #181818;
+		.sidebar__icon{
+
+			span{
+				color: #8257FF;
+			}
+		}
+	}
+}
+
+.sidebar__icon{
+	
+	span{
+		transition:0.2s;
+		color: #67BBE7;
+	}
+}
+
+
+
+
+.sidebar__link_active{
+	font-weight: bold;
+	.sidebar__icon{
+	}
+}
+.sidebar__icon{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform:translate(0,-50%);
+}
+.sidebar__NameLink{
+
+	display: inline-block;
+}
+
+
+
+//incomes
+.sidebar__incomes{
+	margin-top: 29px;
+}
+.sidebar__TilteEarnings{
+	font-weight: 500;
+	font-size: 12px;
+	text-align: center;
+	color: #828282;
+}
+.sidebar__money{
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	color: #A89CB5;
+}
+
+
+
+
+
+
+
+// arrow up
+.sidebar__TOPBLOCK{
+	width: 100%;
+	left: 0;
+	bottom: 20px;
+	// background: red;
+	position: fixed;
+	// background: green;
+}
+.sidebar__up{
+	// display: none;
+	transition:0.3s;
+	cursor: pointer;
+	position: relative;
+	width: 21.9619326501%;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	// background: green;
+	color: #BDBDBD;
+	&:hover{
+		color: #8B8B8B;
+		.arrow{
+			border-top-color: #8B8B8B; 
+			opacity: 1;
+			 transform: rotate(180deg) translate(0px, 25px);
+		}
+	}
+}
+
+.arrow{
+  transform: rotate(180deg) translate(0px, -25px);
+  opacity: 0;
+  transition:0.3s;
+  position: absolute;
+  right: 14px;
+  width: 0px;
+  height: 0px;
+  border: 10px solid transparent; 
+  border-top-color: #BDBDBD; 
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.arrow:before{
+      content: '';
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-top-color: #F2F2F2;
+    display: inline-block;
+    -webkit-transform: translate(-30px, -50px);
+    transform: translate(-8px, -10px);
+}

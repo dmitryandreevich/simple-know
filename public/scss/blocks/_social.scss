@@ -1,0 +1,38 @@
+.social{
+    display: block;
+    padding: 12px 15px;
+    border-radius: 100px;
+    transition: 0.2s;
+    max-width: 300px;
+    width: 100%;
+    margin: 0px auto;
+	.fa{
+		    font-size: 22px;
+    		display: inline-block;
+    		vertical-align: middle;
+    		margin-right: 12px;
+   			color: #FFF;
+	}
+	.text{
+		display: inline-block;
+    	vertical-align: middle;
+    	font-weight: 300;
+    	line-height: normal;
+    	font-size: 16px;
+    	color: #fff;
+	}
+}
+.social_vk{
+	background: #5E7BE4;
+	&:hover{
+		background: #4A67D0;
+	}
+}
+.social_fc{
+	background: #2D52D5;
+	&:hover{
+		background: #153ABD;
+	}
+}
+
+

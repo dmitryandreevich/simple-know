@@ -1,0 +1,21 @@
+<?xml-stylesheet type="text/css" href="../../style.css"?>
+<svg width="16" height="13" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group">
+<g id="Group_2">
+<g id="Vector">
+<path class="fa" d="M 7.76589 13C -7.3852 5.27007 3.57253 -4.3401 7.76589 2.13217C 11.9599 -4.3401 22.9183 5.27007 7.76589 13Z" fill="url(#paint0_linear)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 13 -15.5325 0 15.5325 0)">
+<stop stop-color="#67C5D6"/>
+<stop offset="1" stop-color="#66B3F1"/>
+</linearGradient>
+
+</defs>
+</svg>
+

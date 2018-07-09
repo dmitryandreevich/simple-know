@@ -1,0 +1,37 @@
+.myInterest{
+	padding: 23px 0 35px;
+}
+
+
+.myInterest__box{
+	position: relative;
+	margin-left: -7.5px;
+	margin-right: -7.5px;
+	margin-bottom: 90px;
+}
+
+.myInterest__wrap{
+	padding: 25px 7.5px;
+	display: inline-block;
+	vertical-align: top;
+	&:after {
+		content: " ";
+		display: block; 
+		clear: both;
+	}
+}
+
+.myInterest__wrap_hidden{
+	width: 0;
+	overflow: hidden;
+	visibility: hidden;
+	padding: 0;
+}
+
+
+.myInterest__title{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 16px;
+	margin-bottom: 10px;
+}

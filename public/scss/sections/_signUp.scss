@@ -1,0 +1,158 @@
+.signUp{
+	padding: 80px 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(images/bg.jpg);
+		background-repeat: no-repeat;
+		background-position:center top;
+		background-size: cover;
+		overflow-y: scroll;
+}
+
+.signUp__popup{
+
+	position: relative;
+	max-width: 540px;
+	width: 100%;
+	border-radius: 10px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	top: 50%;
+	transform:translate(0%,-50%);
+}
+
+.signUp__logo{
+	width: 131px;
+	top: -40px;
+	left: 50%;
+	transform:translate(-50%,0);
+	position: absolute;
+	
+}
+
+.signUp__box{
+	width: 100%;
+	padding: 0px 15px;
+}
+.signUp__head{
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+.signUp__title{
+	padding: 25px 0;
+	font-weight: 300;
+	line-height: normal;
+	font-size: 22px;
+	text-align: center;
+	span{
+		color: #7452C7;
+	}
+}
+.signUp__subtitle{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 16px;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.signUp__content{
+	padding: 25px 0;
+}
+.signUp__socBlock{
+	padding: 7.5px 0;
+}
+
+
+.signUp__footer{
+	
+}
+.signUp__email{
+	font-family: Ubuntu;
+	font-weight: 300;
+	line-height: normal;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px 0;
+	a{
+		color: #7452C7;
+		line-height: normal;
+		text-decoration-line: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+.signUp__authorization{
+	@extend .signUp__email;
+	color: #828282;
+	padding: 20px 0; 
+}
+
+
+
+// sign up Email
+
+
+
+.signUp__justi{
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+.signUp__socBlock_din{
+	display: inline-block;
+	max-width: 122px;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.signUp__line{
+	display: inline-block;
+	width: 0px;
+	height: 48px;
+	border-right: 1px solid #E0E0E0;
+	vertical-align: middle;
+}
+.signUp__box{
+	&.minWidth{
+		max-width: 335px;
+		margin: 0 auto;
+	}
+}
+
+.signUp__inpBlock{
+	margin-top: 25px;
+	max-width: 143px;
+	width: 100%;
+	display: inline-block;
+}
+
+.signUp__inpBlock_wi100{
+	width: 100%;
+	max-width: 100%;
+}
+
+
+.signUp__btn{
+	max-width: 100%;
+	width: 100%;
+	padding: 20px 10px;
+}
+
+.signUp__content_pad{
+	padding: 15px 0;
+}
+
+.signUp__authorization_pad{
+	padding: 0px 0 15px;
+}
+.signUp__title_pad,
+.signUp__subtitle_pad{
+	padding: 15px 0;
+}

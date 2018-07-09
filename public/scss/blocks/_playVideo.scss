@@ -1,0 +1,108 @@
+
+
+// videoBLock
+.playVideo{
+    width: 100%;
+}
+.playVideo__small{
+    width: 167px;
+}// modernize^
+.playVideo__wrap{
+    width: 100%;
+}
+.playVideo__BlockImg{
+    width: 100%;
+}
+.playVideo__img{
+    display: block;
+}
+.playVideo__BlockImg_small{
+    height: 91px;
+}// modernize^
+
+
+.playVideo__BlockInfo{
+    padding-top: 3px;
+    width: 100%;
+}
+.playVideo__text{
+    font-size: 13px;
+}
+.playVideo__link{
+    transition:0.2s;
+    color: #333;
+    &:hover{
+        color: #167ac6;
+        // text-decoration: underline;
+    }
+}
+
+
+
+
+
+
+.playVideo__Person{
+    min-height: 20px;
+}
+.playVideo__PersonLink{
+    display: inline-block;
+    height: 100%;
+}
+.playVideo__PersonBlockImg{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 100px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.playVideo__PersonImg{
+    max-width: 100%;
+    max-height: 100%;
+    transition:0.2s;
+}
+.playVideo__PersonText{
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    font-size: 13px;
+    transition:0.2s;
+    a{
+        color: #BDBDBD;
+        &:hover{
+            color: #167ac6;
+        }
+    }
+    
+}
+
+
+
+// big
+
+.playVideo__Big{
+    width: 100%;
+}
+.playVideo__BlockImg_Big{
+    height: 174px;
+}
+.playVideo__BlockInfo_big{
+    padding: 10px 13px 0;
+}
+
+// AverageVideo
+
+.playVideo__Person_justifi{
+    text-align: justify;
+    font-size: 1px;
+    padding: 6.5px 0;
+    &:after {
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 0;
+    }   
+}

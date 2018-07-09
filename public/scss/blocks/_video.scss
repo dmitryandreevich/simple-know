@@ -1,0 +1,128 @@
+
+
+
+.content__box_video{
+	padding: 0 40px;
+}
+.video{
+	background: #F7FBFF;
+	&:after {
+		content: " ";
+		display: block; 
+		clear: both;
+	}
+	height: 332px;
+}
+
+.video__wrap{
+	float: left;
+	height: 100%;
+}
+.video__wrap_player{
+	width: 57.9%;
+}
+.video__wrap_lesson{
+	width: 42.1%;
+	
+}
+
+
+
+.video__player{
+}
+.video__lesson{
+	height: 100%;
+}
+.video__height{
+	height: calc(100% - 65px);
+}
+
+.video__BlockText{
+	padding-top: 12px;
+	padding-left: 40px;
+	margin-bottom: 32px;
+}
+.video__text{
+	font-weight: normal;
+	line-height: normal;
+	font-size: 16px;
+	display: inline-block;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+
+
+
+.video__scroll{
+	height: 100%;
+	position: relative;
+}
+.video__list{
+
+}
+.video__item{
+	
+}
+
+.video__link{
+	color: #828282;
+	padding: 8px 15px;
+	display: block;
+	position: relative;
+	
+	
+	&:hover{
+		background: #ECF0F4;
+	}
+
+	&.active{
+		background: #8257FF;
+		.video__lsName,
+		.video__icPlay,
+		.video__time{
+			color: #FFF;
+			
+		}
+	}
+	&.passed{
+		.video__passed{
+			display: block;
+		}
+	}
+	
+}
+.video__dib{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.video__lsName,
+.video__icPlay,
+.video__time{
+	font-weight: normal;
+	line-height: normal;
+	font-size: 14px;
+	
+}
+.video__icPlay{
+	font-size: 15px;
+	margin-right: 40px;
+}
+.video__passed{
+	display: none;
+	font-size: 15px;
+	position: absolute;
+	color: #5AE88B;
+	top: 50%;
+	left: 45px;
+	transform:translate(0%,-50%);
+}
+.video__lsName{
+	min-width: 223px;
+	line-height: 1.4;
+	margin-right: 10px;
+}
+.video__time{
+	
+}

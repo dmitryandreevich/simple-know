@@ -1,0 +1,207 @@
+.card{
+	width: 215px;
+	overflow: hidden;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	
+	border: 1px solid #F2F2F2;
+	
+
+
+	background: rgba(#FAFAFA,0.5);
+	
+	.card__list{
+		opacity: 0.5;
+		pointer-events: none;
+	}
+	.card__name{
+		opacity: 0.5;
+	}
+	&.active{
+		background: #FAFAFA;
+		
+
+		.card__list{
+			opacity: 1;
+			pointer-events: inherit;
+		}
+		.card__name{
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+
+.card__head{
+	position: relative;
+	padding: 0 18px 0px 25px;
+	height: 36px;
+	width: 100%;
+	border-bottom:1px solid #F2F2F2;
+	font-size: 18px;
+}
+.card__name{
+    width: calc(100% - 25px);
+	display: block;
+	font-weight: 500;
+	position: relative;
+	top: 50%;
+	transform:translate(0,-50%);
+	span{
+		 position: relative;
+		 white-space: nowrap;
+	}
+}
+.card__switch{
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform:translate(0,-50%);
+	right: 16px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 100px;
+	span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+	}
+	&.remove{
+		span{
+			display: block;
+			font-size: 15px;
+			color: #828282;
+			transition:0.2s;
+		}
+		&:hover{
+			span{
+				color: #565656;
+			}
+		}
+	}
+	&.add{
+		span{
+			font-size: 20px;
+			color: $purple;
+		}
+		&:hover{
+			span{
+				color: darken($purple,5%);
+			}
+		}
+	}
+}
+
+
+.card__list{
+	padding: 10px 13px;
+}
+.card__item{
+	width: 100%;
+	margin: 8px 0;
+	position: relative;
+}
+.card__box{
+	transition:0.2s;
+	border-radius:3px ;
+	background: #F0F0F0;
+	padding: 5px 5px 5px 18px;
+	position: relative;
+	
+}
+.card__subname{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 16px;
+}
+.card__suIcon{
+	position: absolute;
+	top: 50%;
+	transform:translate(0%,-50%);
+	right: 5px;
+	font-size: 15px;
+	cursor: pointer;
+	display: none;
+	color: #FFF;
+}
+.card__checkbox{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	background: red;
+}
+
+.card__checkbox:checked + .card__box{
+	background: $purple;
+	.card__suIcon{
+		display: block;
+	}
+	.card__subname{
+		color: #FFF;
+	}
+}
+.card__checkbox:hover + .card__box{
+	background: darken(#F0F0F0,5%);
+}
+.card__checkbox:checked{
+	width: 20px;
+	right: 2px;
+}
+.card__checkbox:checked:hover + .card__box{
+	background: darken($purple,5%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card_add{
+	height: 200px;
+	cursor: pointer;
+	position: relative;
+	transition:0.2s;
+	&:hover{
+		background: darken(#FCFCFC,5%);
+		
+	}
+}
+.card__center{
+	position: relative;
+	top: 50%;
+	transform:translate(0,-50%);
+	text-align: center;
+}
+.card_add__ic{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	font-size: 20px;
+	color: #828282;
+	transition:0.2s;
+}
+.card_add__name{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 14px;
+	color: #828282;
+	transition:0.2s;
+}

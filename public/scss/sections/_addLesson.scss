@@ -1,0 +1,205 @@
+.addLesson{
+	
+}
+
+.addLesson__creature{
+	padding: 35px 0;
+	background: #F2F2F2;
+}
+.addLesson__wrapHead{
+	float: left;
+	width: 50%;
+}
+
+.addLesson__blHead{
+	max-width: 330px;
+	width: 100%;
+	
+}
+
+
+.addLesson__selectInp{
+	margin-bottom: 27px;
+}
+
+.addLesson__input{
+    transition: 0.3s;
+    border: none;
+    width: 100%;
+    background: #FAFAFA;
+    box-shadow: 3px 0px 1px -1px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    height: 56px;
+    padding: 0 64px 0 24px;
+    font-family: $font-fam;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1F1F20;
+    @include placeholder {
+    	color: #9B9B9B;
+    	font-weight: normal;
+    	font-size: 16px;
+    	font-family: $font-fam;
+    }
+    &:focus{
+    	box-shadow:0px 0px 8px 1px rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+.addLesson__choice{
+	line-height: normal;
+	font-size: 14px;
+	color: #828282;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+.addLesson__tagsList{
+	
+}
+.addLesson__tagsItem{
+	text-align: center;
+	margin: 3px 6px;
+	min-width: 79px;
+	overflow: hidden;
+	display: inline-block;
+	padding: 4px 9px;
+	background: #FFFFFF;
+	border-radius: 100px;
+	line-height: normal;
+	font-size: 11px;
+	color: #828282;
+	position: relative;
+	&:hover{
+		.addLesson__tagsRemove{
+			transform:translate(0%,0%);
+		}
+		.addLesson__tagsName{
+			transform:translate(-20px,0%);
+		}
+	}
+}
+.addLesson__tagsName{
+	display: inline-block;
+	transition:0.3s;
+	
+}
+.addLesson__tagsRemove{
+	transition:0.3s;
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	background: #FF0021;
+	right: 0;
+	top: 0;
+	transform:translate(100%,0%);
+	.icon-fa-cross{
+		transition:0.3s;
+		color: #FFF;
+		position: absolute;
+		font-size: 10px;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+	}
+	&:hover{
+		background: #C70021;
+		.icon-fa-cross{
+			transform:translate(-50%,-50%) rotate(90deg);
+		}
+	}
+}
+
+
+
+
+// footerAdd
+
+
+
+
+.addLesson__video{
+ padding: 40px 0 30px;	
+}
+
+.addLesson__titleFoot{
+	margin-bottom: 32px;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 18px;
+}
+.addLesson__boxFoot{
+	
+}
+.addLesson__wrapFoot{
+		float: left;
+}
+.addLesson__wrapFoot_left{
+	margin-right: 14px;
+	width: 56.996%;
+}
+.addLesson__wrapFoot_right{
+	width: calc(100% - 56.994% - 14px);
+}
+
+
+
+
+
+// send
+
+
+.addLesson__send{
+	margin-top: 20px;
+}
+.addLesson__sendWrap{
+	text-align: left;
+	float: left;
+}
+
+
+.addLesson__sendWrap_left{
+	margin-right: 25px;
+	width: 60%;
+}
+.addLesson__sendWrap_right{
+	width: calc(100% - 60% - 25px);
+	
+}
+
+.addLesson__sendBtn{
+	font-size: 16px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.38);
+	cursor: pointer;
+	
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 2px;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	background: #f2f2f2;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNmQ2ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -webkit-linear-gradient(#f2f2f2 0%, #d6d6d6 100%);
+	background: -o-linear-gradient(#f2f2f2 0%, #d6d6d6 100%);
+	background: linear-gradient(#f2f2f2 0%, #d6d6d6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#d6d6d6',GradientType=0 );
+	
+	&:hover{
+		background: #D6D6D6;
+	}
+}
+
+.addLesson__btn{
+	max-width: 250px;
+	width: 100%;
+	margin-top: 46px;
+} 

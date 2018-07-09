@@ -1,0 +1,48 @@
+.review{
+	margin-bottom: 15px;
+}
+
+.review__img{
+	width: 52px;
+	height: 52px;
+	overflow: hidden;
+	border-radius: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+.review__blockInfo{
+	padding-left: 15px;
+	width: calc(100% - 67px);
+	display: inline-block;
+	vertical-align: top;
+}
+.review__box{
+	margin-bottom: 8px;
+}
+.review__name{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+	a{
+		line-height: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: #000000;
+		transition:0.2s;
+		&:hover{
+			color: $blue;
+		}
+	}
+}
+.review__data{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	font-size: 14px;
+	color: #BDBDBD;
+}
+.review__text{
+	line-height: normal;
+	font-size: 14px;
+	color: #000000;
+}

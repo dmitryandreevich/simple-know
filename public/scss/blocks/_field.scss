@@ -1,0 +1,39 @@
+.field{
+	padding-bottom: 40px;
+}
+.field__wrap{
+	width: 50%;
+	float: left;
+	
+}
+.field__item{
+	// background: green;
+	display: inline-block;
+	max-width: 330px;
+	width: 100%;
+	
+}
+.field__inputArea_m30{
+	margin-bottom: 30px;
+}
+.field__inputArea_m60{
+	    margin-bottom: 46px;
+}
+
+
+.field__btn{
+	max-width: 254px;
+	width: 100%;
+	cursor: pointer;
+}
+.field__btn_margin{
+	margin-top: 50px;
+}
+
+.field__name{
+	margin-bottom: 20px;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 18px;
+	color: #333333;
+}

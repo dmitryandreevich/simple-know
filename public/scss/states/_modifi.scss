@@ -1,0 +1,17 @@
+.display_block {
+	display: block;
+}
+.display_none {
+	display: none;
+}
+.opacity_1 {
+	opacity: 1;
+}
+
+.clearfix:before, .clearfix:after{
+  content: " ";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}

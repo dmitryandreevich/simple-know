@@ -1,0 +1,132 @@
+.myLessons{
+padding-bottom: 100px;
+}
+
+.myLessons__item{
+	padding: 5px 0;
+	&:nth-child(even){
+		background: #FAFAFA;
+	}
+}
+.myLessons__playVideo{
+	width: 820px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.myLessons__justi{
+	width: 100%;
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+.myLessons__wrap{
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+	width: 100%;
+	.playVideo__BlockImg{
+		display: inline-block;
+		vertical-align: middle;
+		width: 123px;
+		height: auto;
+	}
+	.playVideo__BlockInfo{
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 145px);
+		padding-top: 0;
+	}
+	.playVideo__text{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+		max-width: 235px;
+		width: 100%;
+	}
+	.iconStatic{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 200px;
+		width: 100%;
+	}
+	.iconStatic__item{
+		width: 49%;
+		padding: 3px 0;
+	}
+	
+	.iconStatic__icon{
+		span{
+			font-size: 18px;
+		}
+	}
+	.iconStatic__text{
+		font-size: 14px;
+	}
+	.playVideo__Person{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.myLessons__static{
+		max-width: 190px;
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.myLessons__static_item{
+		line-height: normal;
+		font-size: 12px;
+		color: #BDBDBD;
+		padding: 3px 0;
+		span{
+			font-size: 14px;
+			color: #333;
+			margin-left: 6px;
+		}
+	}
+}
+
+
+.myLessons__correct{
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+.myLessons__correct_item{
+	display: inline-block;
+	vertical-align: middle;
+}
+.myLessons__correct_link{
+	display: block;
+	color: #CFCCE0;
+	transition:0.2s;
+	
+	.icon-fa-correct{
+		font-size: 30px;
+	}
+	.icon-fa-trash{
+		font-size: 26px;
+	}
+	&:hover{
+		color: #C0BDD1;
+	}
+}

@@ -1,0 +1,82 @@
+.titleBlock{
+	padding: 29px 0;
+	border-bottom:1px solid #E0E0E0;
+}
+
+.titleBlock__justi{
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+
+.titleBlock__title{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px;
+}
+.titleBlock__training{
+	display: inline-block;
+	vertical-align: middle;
+	
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+.titleBlock__training_maxwi{
+	max-width: 563px;
+	width: 100%;
+}
+.titleBlock__training_maxwi_2{
+	max-width: 319px;
+	width: 100%;
+}
+
+.titleBlock__item{
+	display: inline-block;
+	vertical-align: middle;
+	&.m0{
+		margin-left: 0;	
+	}
+}
+.titleBlock__link{
+	color: #333;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+.titleBlock__teachers_icon{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	.icon-fa-student{
+		color: #CFCCE0;
+		font-size: 22px;
+		display: block;
+	}
+}
+.titleBlock__teachers_name{
+	
+}
+
+
+.titleBlock__manual{
+	
+}

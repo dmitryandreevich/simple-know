@@ -1,0 +1,111 @@
+.teacher{
+	padding: 30px 0;
+	position: relative;
+}
+.teacher__wrap{
+	width: 50%;
+	float: left;
+}
+
+
+.teacher__rewtitle{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+.teacher__wrap_left{
+	padding-right: 15px;
+}
+
+
+
+.teacher__person{
+	margin-bottom: 30px;
+}
+.teacher__person_img{
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.teacher__blockInfo{
+	vertical-align: middle;
+	display: inline-block;
+	padding-left: 35px;
+	width: calc(100% - 156px);
+}
+
+.teacher__person_name{
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px;
+	margin-bottom: 7px;
+}
+.teacher__person_data{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+
+// teacher__info
+
+
+.teacher__info{
+	margin-bottom: 50px;
+}
+
+.teacher__list{
+	width: 100%;
+}
+.teacher__item{
+	position: relative;
+	text-align: center;
+	padding: 0 30px;
+	display: inline-block;
+	&.teacher__item_line{
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform:translate(0,-50%);
+			background: #E0E0E0;
+			width: 1px;
+			height: 27px;
+			
+		}
+	}
+}
+.teacher__info_quantity{
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px;
+}
+.teacher__info_name{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 14px;
+	color: #828282;
+}
+
+
+.teacher__blockDesc{
+	
+}
+
+.teacher__blockDesc__title{
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.teacher__blockDesc__text{
+	font-weight: normal;
+	line-height: normal;
+	font-size: 14px;
+}

@@ -1,0 +1,151 @@
+.profile{
+	max-width: 370px;
+	width: 100%;
+	padding: 40px 0;
+		
+}
+.profile_justi{
+	text-align: justify;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+	}
+}
+
+
+.profile__item{
+	display: inline-block;
+	vertical-align: middle;
+}
+.profile__avatar{
+	width: 120px;
+	height: 120px;
+	border-radius: 100px;
+	overflow: hidden;
+	border:1px solid #BDBDBD;
+	position: relative;
+	&:hover{
+		.profile__addfoto{
+			visibility: inherit;
+			opacity: 1;
+		}
+	}
+}
+.profile__addfoto{
+	cursor: pointer;
+	transition:0.3s;
+	opacity: 0;
+	visibility: hidden;
+	background: rgba(#000,0.6);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	span{
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform:translate(0%,-50%);
+		font-size: 16px;
+		color: #FFF;
+		text-align: center;
+	}
+}
+
+
+
+.profile__data{
+	width: 195px;
+}
+
+.profile__mail{
+	height: 30px;
+	margin-bottom: 5px;
+	.fa{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 30px;
+		color: #CFCCE0;
+		cursor: pointer;
+		transition:0.2s;
+		&:hover{
+			color: #ABA8BC;
+		}
+	}
+}
+.profile__input{
+	width: calc(100% - 47px);
+	margin-right: 15px;
+	font-size: 18px;
+	font-weight: normal;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	border-bottom: 1px solid none;
+	&:focus{
+		border-bottom: 1px solid #DCDCDC;
+	}
+}
+
+
+
+.profile__register{
+	font-weight: 300;
+	line-height: normal;
+	font-size: 12px;
+	color: #BDBDBD;	
+}
+.profile__social{
+	margin-top: 6px;
+	display: inline-block;
+	padding: 6px 10px;
+	width: 100%;
+	border-radius: 100px;
+	transition:0.2s;
+}
+.profile__social_tied{
+	background: #8257FF;
+	&:hover{
+		background: #7348F0;
+	}
+	.fa{
+		font-size: 22px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 12px;
+		color: #FFF;
+	}
+	.text{
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 300;
+		line-height: normal;
+		font-size: 14px;
+		color: #FFFFFF;
+	}
+}
+.profile__social_unattached{
+	background: #E0E0E0;
+	&:hover{
+		background: #D0D0D0;
+	}
+	.fa{
+		font-size: 22px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 12px;
+		color: #BDBDBD;
+	}
+	.text{
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 300;
+		line-height: normal;
+		font-size: 14px;
+		color: #4F4F4F;
+	}
+}

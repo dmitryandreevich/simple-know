@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/signup', function () {
+    return view('auth.signUp');
+});
+Route::get('/signin', function () {
+    return view('auth.signIn');
+});
+Route::get('/signupemail', function () {
+    return view('auth.signUpEmail');
 });
