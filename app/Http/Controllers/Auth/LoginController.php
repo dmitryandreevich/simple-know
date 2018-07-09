@@ -66,7 +66,12 @@ class LoginController extends Controller
 
             return 'you are loggined!';
         }
-        
+
         return redirect()->back()->with('error', 'Логин или пароль неверны.')->withInput();
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect(route('login.index'));
     }
 }

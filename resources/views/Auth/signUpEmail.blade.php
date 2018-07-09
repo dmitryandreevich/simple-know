@@ -104,7 +104,7 @@
 
             <p class="signUp__authorization signUp__authorization_pad">
                 Уже с нами?
-                <a href="signIn.html">Авторизуйтесь</a>
+                <a href="{{ route('login.index') }}">Авторизуйтесь</a>
             </p>
             <!-- /.signUp__email -->
         </div>

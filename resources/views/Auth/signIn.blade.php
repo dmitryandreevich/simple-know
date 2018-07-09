@@ -93,7 +93,7 @@
 
             <p class="signUp__authorization signUp__authorization_pad">
                 Вы ещё не с нами?
-                <a href="signUpEmail.html">Зарегистрироваться</a>
+                <a href="{{ route('register.main') }}">Зарегистрироваться</a>
             </p>
             <!-- /.signUp__email -->
         </div>

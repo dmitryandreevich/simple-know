@@ -19,11 +19,13 @@ Auth::routes();
 
 Route::group(['namespace' => 'Auth'], function (){
 
+    Route::get('/signup','RegisterController@main')->name('register.main');
     Route::get('/signupemail','RegisterController@index')->name('register.index');
     Route::post('/signupemail','RegisterController@registerByEmail')->name('register.email');
 
     Route::get('/signin','LoginController@index')->name('login.index');
     Route::post('/signin','LoginController@loginByEmail')->name('login.email');
 
+    Route::get('/logout', 'LoginController@logout')->name('logout');
 });
 Route::get('/home', 'HomeController@index')->name('home');

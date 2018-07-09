@@ -40,6 +40,16 @@ class RegisterController extends Controller
         return view('auth.signUpEmail');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function main(){
+        return view('auth.signUp');
+    }
+
+    /**
+     * RegisterController constructor.
+     */
     public function __construct()
     {
         $this->middleware('guest');

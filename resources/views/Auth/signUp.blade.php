@@ -59,12 +59,12 @@
         <div class="signUp__box">
             <p class="signUp__email">
                 Или зарегистрируйтесь с
-                <a href="signUpEmail.html">помощью email</a>
+                <a href="{{ route('register.index') }}">помощью email</a>
             </p>
             <!-- /.signUp__email -->
             <p class="signUp__authorization">
                 Уже с нами?
-                <a href="signIn.html">Авторизуйтесь</a>
+                <a href="{{ route('login.index') }}">Авторизуйтесь</a>
             </p>
             <!-- /.signUp__email -->
         </div>
